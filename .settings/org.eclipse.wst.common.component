@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="bookstore_orig">
+    <wb-module deploy-name="bookstore">
         <wb-resource deploy-path="/" source-path="/web" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/java"/>
-        <property name="java-output-path" value="/bookstore_orig/bin"/>
-        <property name="context-root" value="bookstore_orig"/>
+        <property name="java-output-path" value="/bookstore/bin"/>
+        <property name="context-root" value="bookstore"/>
     </wb-module>
 </project-modules>
