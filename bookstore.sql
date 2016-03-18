@@ -1,4 +1,4 @@
-﻿--DROP TABLE BOOKAUTHORS;
+--DROP TABLE BOOKAUTHORS;
 --DROP TABLE BOOKCATEGORIES;
 --DROP TABLE ORDERITEMS;
 --DROP TABLE ORDERS;
@@ -23,7 +23,6 @@ INSERT INTO AUTHORS VALUES ('6', 'Victoria', 'Finlay');
 INSERT INTO AUTHORS VALUES ('7', 'June Jamrich', 'Parsons');
 INSERT INTO AUTHORS VALUES ('8', 'Dan', 'Oja');
 
-
 CREATE TABLE BOOKS (
 	isbn VARCHAR PRIMARY KEY,
 	title VARCHAR,
@@ -43,7 +42,7 @@ This book is full of well-rounded, balanced recipes that will fill you up and ti
 and because I''ve done all the hard work on the nutrition front, you can be sure that every choice is a good choice. 
 If you pick up just a handful of ideas from this book, it will change the way you think about food, 
 arming you with the knowledge to get it right on the food front, most of the time.<br><br>
-Love, Jamie xxx', 'Ecco', '20-Oct-2015', 'Hardcover', 24.55);
+Love, Jamie xxx', 'Ecco', '2015-10-20', 'Hardcover', 24.55);
 
 INSERT INTO BOOKS VALUES ('9781250073754', 'Simply Nigella: Feel Good Food', 
 '<b>"Part of the balance of life lies in understanding that different days require different ways of eating . . ."</b><br><br>
@@ -56,7 +55,7 @@ Whether you need to create some breathing space at the end of a long week (Asian
 indulge in a sweet treat (Lemon Pavlova; Chocolate Chip Cookie Dough Pots), or wake up to a strength-giving 
 breakfast (Toasty Olive Oil Granola), Nigella''s new cookbook is filled with recipes destined to become firm favorites.<br><br>
 <i>Simply Nigella</i> is the perfect antidote to our busy lives: a calm and glad celebration of food to soothe and uplift.', 
-'Flatiron Books', '3-Nov-2015', 'Hardcover', 19.64);
+'Flatiron Books', '2015-11-03', 'Hardcover', 19.64);
 
 INSERT INTO BOOKS VALUES ('9781476746586', 'All the Light We Cannot See', '<b>WINNER OF THE PULITZER PRIZE</b><br>
 From the highly acclaimed, multiple award-winning Anthony Doerr, the beautiful, stunningly ambitious instant 
@@ -75,7 +74,7 @@ Doerr''s “stunning sense of physical detail and gorgeous metaphors” <i>(San 
 Deftly interweaving the lives of Marie-Laure and Werner, he illuminates the ways, against all odds, people try 
 to be good to one another. Ten years in the writing, a National Book Award finalist, 
 <i>All the Light We Cannot See</i> is a magnificent, deeply moving novel from a writer “whose sentences never fail to thrill” 
-<i>(Los Angeles Times)</i>.', 'Scribner', '6-May-2014', 'Hardcover', 15.29); 
+<i>(Los Angeles Times)</i>.', 'Scribner', '2014-05-06', 'Hardcover', 15.29); 
 
 INSERT INTO BOOKS VALUES ('9781594633669', 'The Girl on the Train', '<b>Instant #1 New York Times Bestseller<br><br>
 “Nothing is more addicting than The Girl on the Train.”—Vanity Fair<br><br>
@@ -94,7 +93,7 @@ Now everything''s changed. Unable to keep it to herself, Rachel offers what she 
 and becomes inextricably entwined in what happens next, as well as in the lives of everyone involved. 
 Has she done more harm than good?<br><br>
 Compulsively readable, <i>The Girl on the Train</i> is an emotionally immersive, 
-Hitchcockian thriller and an electrifying debut.', 'Riverhead Books', '13-Jan-2015', 'Hardcover', 13.47);
+Hitchcockian thriller and an electrifying debut.', 'Riverhead Books', '2015-01-13', 'Hardcover', 13.47);
 
 INSERT INTO BOOKS VALUES ('9781455520619', 'See Me', '<i>See me just as I see you . . .</i><br><br>
 Colin Hancock is giving his second chance his best shot. With a history of violence and bad decisions 
@@ -116,7 +115,7 @@ Maria and Colin will be tested in increasingly terrifying ways. Will demons from
 relationship they''ve begun to build, or will their love protect them, even in the darkest hour?<br><br>
 Rich in emotion and fueled with suspense, SEE ME reminds us that love is sometimes forged in the 
 crises that threaten to shatter us . . . and that those who see us for who we truly are may not always be the ones easiest to recognize.', 
-'Grand Central Publishing', '13-Oct-2015', 'Paperback', 8.68); 
+'Grand Central Publishing', '2015-10-13', 'Paperback', 8.68); 
 
 INSERT INTO BOOKS VALUES ('9781606064290', 'The Brilliant History of Color in Art', 'The history of art is inseparable from the history of color. 
 And what a fascinating story they tell together: one that brims with an all-star cast of characters, eye-opening details, and unexpected 
@@ -131,7 +130,7 @@ for instance, purple might not have become the royal color of the Western world.
 might never have found its way into the hands of Cézanne. Without mango-eating cows, the sunsets of Turner might have lost their shimmering glow. 
 And were it not for the pigment cobalt blue, the halls of museums worldwide might still be filled with forged Vermeers.<br><br>
 Red ocher, green earth, Indian yellow, lead white—no pigment from the artist’s broad and diverse palette escapes 
-Finlay’s shrewd eye in this breathtaking exploration.', 'J. Paul Getty Museum', '1-Nov-2014', 'Hardcover', 17.75);
+Finlay’s shrewd eye in this breathtaking exploration.', 'J. Paul Getty Museum', '2014-11-01', 'Hardcover', 17.75);
 
 INSERT INTO BOOKS VALUES ('9781285096926', 'New Perspectives on Computer Concepts 2014: Comprehensive 16th Edition', 'Go beyond computing basics with 
 the award-winning NEW PERSPECTIVES ON COMPUTER CONCEPTS. Designed to get you up-to-speed on essential computer literacy skills, 
@@ -140,7 +139,7 @@ NEW PERSPECTIVES ON COMPUTER CONCEPTS 2014 incorporates significant technology t
 life; such as concerns for data security, personal privacy, online safety, controversy over digital rights management, 
 interest in open source software and portable applications, and more. In addition, coverage of Microsoft Windows 8 
 and Office 2013 will introduce you to the exciting new features of Microsoft''s next generation of software.', 
-'Course Technology', '30-Jan-2013', 'Paperback', 148.82);
+'Course Technology', '2013-01-30', 'Paperback', 148.82);
 
 CREATE TABLE BOOKAUTHORS (
 	isbn VARCHAR,

@@ -32,7 +32,9 @@ public class SearchController extends HttpServlet {
                 
                 request.getSession().setAttribute("books", books);
                 response.sendRedirect(request.getContextPath() + "/search_results.jsp?searchString=" + searchString);
-            } catch (Exception e) {}
+            } catch (Exception e) {
+            	e.printStackTrace();
+            }
 
         }
     }

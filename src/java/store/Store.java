@@ -35,10 +35,10 @@ public class Store {
         
         BookSet books = new BookSet();
         
-        String query = "SELECT DISTINCT isbn, title, description, publisher, "
+        String query = "SELECT DISTINCT b.isbn, title, description, publisher, "
                 + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price "
                 + "FROM BOOKAUTHORS "
-                + "NATURAL JOIN BOOKS "
+                + "NATURAL JOIN BOOKS b "
                 + "NATURAL JOIN AUTHORS "
                 + "WHERE LOWER(title) LIKE LOWER('%" + searchString + "%') OR "
                 + "LOWER(first_name) LIKE LOWER('%" + searchString + "%') OR "
@@ -71,9 +71,14 @@ public class Store {
             throws Exception {
         BookSet books = new BookSet();
         
-        String query = "SELECT isbn, title, description, publisher, publication_date as pub_date, "
-                + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price FROM BOOKS "
-                + "WHERE publication_date >= TO_DATE('01-Jan-2015', 'dd-Mon-yyyy')";
+//        String query = "SELECT isbn, title, description, publisher, publication_date as pub_date, "
+//                + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price FROM BOOKS "
+//                + "WHERE publication_date >= TO_DATE('01-Jan-2015', 'dd-Mon-yyyy')";
+
+        // Modified for h2
+        String query = "SELECT b.isbn, title, description, publisher, publication_date as pub_date, "
+                + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price FROM BOOKS b "
+                + "WHERE publication_date >= '2015-01-01'";
         
         ResultSet r = myConnection.runQuery(query);
         while (r.next()) {
@@ -98,10 +103,10 @@ public class Store {
         
         BookSet books = new BookSet();
         
-        String query = "SELECT isbn, title, description, publisher, publication_date as pub_date, "
-                + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price FROM BOOKCATEGORIES "
-                + "NATURAL JOIN BOOKS "
-                + "WHERE category_name = '" + category + "' "
+        String query = "SELECT b.isbn, title, description, publisher, publication_date as pub_date, "
+                + "TO_CHAR(publication_date, 'Month dd, yyyy') publication_date, book_type, price FROM BOOKCATEGORIES c "
+                + "NATURAL JOIN BOOKS b "
+                + "WHERE c.category_name = '" + category + "' "
                 + "ORDER BY title";
                 
         

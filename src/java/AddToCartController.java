@@ -30,7 +30,9 @@ public class AddToCartController extends HttpServlet {
             store.addBookToCart(cart, isbn);
             request.getSession().setAttribute("cart", cart);
             response.sendRedirect(request.getHeader("referer"));
-        } catch(Exception e) {}
+        } catch(Exception e) {
+        	e.printStackTrace();
+        }
 
     }
     

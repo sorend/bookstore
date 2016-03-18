@@ -64,11 +64,17 @@ public class DBWrapper {
     public void connectAsDefaultLibrary() 
     		throws Exception {
     	
-    	dbUrl = "jdbc:postgresql:bookstore";
+//    	dbUrl = "jdbc:postgresql:bookstore";
+//    	
+//        jdbcClassName = "org.postgresql.Driver";
+//        username = "srgykim";
+//        password = "srgykim";
     	
-        jdbcClassName = "org.postgresql.Driver";
-        username = "srgykim";
-        password = "srgykim";
+    	// Modified for H2
+    	dbUrl = "jdbc:h2:tcp://127.0.1.1/~/bookstore";
+        jdbcClassName = "org.h2.Driver";
+        username = "sa";
+        password = "";
 		closeConnections();
 		connect();
     }
@@ -85,7 +91,13 @@ public class DBWrapper {
 		Driver driver = (Driver) Class.forName(jdbcClassName).newInstance();
 		DriverManager.registerDriver(driver);
 		
-		dbCon = DriverManager.getConnection(dbUrl, username, password);
+		try {
+			dbCon = DriverManager.getConnection(dbUrl, username, password);
+		}
+		catch (Exception e) {
+			System.out.println("Error connecting to database: " + e.getMessage());
+			e.printStackTrace();
+		}
     }
 
     
