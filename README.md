@@ -1,30 +1,29 @@
 # bookstore
-Available at: https://bookstore-srgykim.rhcloud.com/
-_________________________________________________________________________________________________________________________
-Online shopping system (bookstore) implemented using Java Servlets, JSP, Apache Tomcat.
 
-To run this project on your local machine follow these instructions:
+This is a fork of [Sergey Kim's bookstore](https://github.com/srgykim/bookstore). Please see his project for updates and changes. Highlights of this fork are:
 
-1. Download and install PostgreSQL http://www.postgresql.org/ including pgAdmin.
+- Use H2 database instead of PostgreSQL.
+- Use Eclipse for project instead of NetBeans.
 
-2. Download and install Netbeans https://netbeans.org/
-   Note: Don't forget to include Apache Tomcat to be installed during the installation procedure.
+## Getting started
 
-3. Create a new user named "srgykim" and password "srgykim" using pgAdmin and grant all the privileges (superuser).
+1. Download and install latest Eclipse JavaEE (Mars.1 is what was used).
 
-4. Download the project from this repository and extract it.
+2. Open the project in Eclipse:
 
-5. On behalf of "srgykim" (with ownership) user create a new database called "bookstore".
+   a. File > Import > Git > Projects from Git
+   b. Select: Clone URI
+   c. Use URI: **git://github.com:sorend/bookstore**
+   d. In the wizard for project import, select Import existing Eclipse projects
 
-6. Run the script bookstore.sql
+3. Start the H2 database server. It is available in the web/lib/ folder in this repository.
 
-7. Open the project using Netbeans.
+   cd web/lib/
+   java -cp h2*.jar org.h2.tools.Server
+   
+4. Create the database in H2
 
-8. Add latest PostgreSQL JDBC Driver using Netbeans.
+   a. When the H2 server starts it opens a browser console. Connect to the database using the following JDBC url: **jdbc:h2:tcp://127.0.1.1/~/bookstore**  (leave other settings as default).
+   b. In the H2 database console copy and paste the contents of bookstore.sql
 
-9. Run the project. 
-
-_________________________________________________________________________________________________________________________
-
-Contacts:
-srgykim@gmail.com
+5. Start web application in Eclipse: Right-click on project > Run As > Run on Server
